@@ -12,7 +12,7 @@ app.listen(PORT, HOST, () => {
         axios.get('https://fishandmeat.onrender.com/api/health')
             .then(() => console.log('Keep-alive ping successful'))
             .catch((err) => console.error('Keep-alive ping failed:', err.message))
-    }, 60000) // Testing: 1 min — change back to 300000 (5 min) for production
+    }, 300000) // Testing: 1 min — change back to 300000 (5 min) for production
 })
 
 
