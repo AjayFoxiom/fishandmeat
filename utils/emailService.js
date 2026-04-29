@@ -9,6 +9,7 @@ const emailService = async (email, subject, data, orderId, pdfPath) => {
             pass: process.env.EMAIL_PASS,
         },
     });
+    
 
     if (orderId && pdfPath) {
         var mailOptions = {
