@@ -17,11 +17,10 @@ model users {
   id        String @id @default(auto()) @map("_id") @db.ObjectId
   username  String
   email     String @unique
-  mobile    String @unique
+  mobile    String? @unique
+  password  String
   address   String?
   pincode   String?
-  otp       String? 
-  otpExpiry DateTime?
   fcmToken  String? 
   vendor    String  @default("false")
   isActive  Boolean  @default(true)
