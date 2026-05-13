@@ -7,6 +7,8 @@ const sendResponse = require('../utils/sendResponse')
 
 
 exports.registerUser = catchAsync(async (req, res, next) => {
+    console.log("req--------------------",req.body);
+    
     const { email, password, username, mobile, fcmToken } = req.body
 
     if (!email || !password || !username) {
@@ -34,6 +36,9 @@ exports.registerUser = catchAsync(async (req, res, next) => {
     })
 
     const token = jwt.sign({ userId: user.id }, process.env.JWT_PRIVATE_KEY)
+    console.log("token ------------: ", token);
+    console.log("user ------------: ", user);
+
 
     sendResponse(res, 201, true, 'User registered successfully', {
         token,

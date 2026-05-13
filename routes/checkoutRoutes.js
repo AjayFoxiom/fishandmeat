@@ -6,7 +6,7 @@ const jwtMiddle = require('../middlewares/jwtMiddleware')
 const router = express.Router()
 
 router.post('/', jwtMiddle, checkoutController.checkoutCart)
-router.post('/comfirm-payment', jwtMiddle, checkoutController.confirmPayment)
+router.post('/confirm-payment', jwtMiddle, checkoutController.confirmPayment)
 
 
 
