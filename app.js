@@ -37,6 +37,7 @@ app.use('/api/checkouts', checkoutRouter)
 app.use('/api/health', healthRouter)
 
 
+
 app.get("/", (req, res) => {
     res.send("<h1>server is live</h1>")
 })
